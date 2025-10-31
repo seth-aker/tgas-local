@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - esbuild
+
+overrides:
+  tgas-local: link:../../AppData/Local/pnpm/global/5/node_modules/tgas-local
