@@ -7,12 +7,12 @@
     "declarationDir": "./lib/types",
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "es2022",
-    "moduleResolution": "node",
-    "target": "ES2024",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "es2022",
     "types": [],
     // For nodejs:
-    "lib": ["ES2024"],
+    "lib": ["ES2022"],
     // "types": ["node"],
     // and npm install -D @types/node
 
@@ -48,8 +48,7 @@
     "typeRoots": [
       "./node_modules/@types",
       "./src/types"
-    
     ]
   },
-  "files": ["./src/index.ts"]
+  "files": ["src/index.ts"]
 }

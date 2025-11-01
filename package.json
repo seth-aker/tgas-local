@@ -1,5 +1,5 @@
 {
-  "name": "@seth-aker/tgas-local",
+  "name": "tgas-local",
   "version": "1.0.0",
   "description": "Typescript support for running and testing GAS projects locally.",
   "type": "module",
@@ -14,21 +14,23 @@
     "lib/**/*"
   ],
   "keywords": [
-    "GAS",
-    "Google Apps Scripts"
+    "Google Apps Scripts",
+    "gas",
+    "typescript",
+    "gas-local",
+    "googleappsscript"
   ],
   "author": "Seth Aker <saker132@gmail.com> (https://github.com/seth-aker)",
-  "license": "ISC",
+  "license": "LGPL-3.0-or-later",
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "esbuild": "^0.25.11",
-    "glob": "^11.0.3"
+    "glob": "^11.0.3",
+    "@types/google-apps-script": "^2.0.7"
   },
   "devDependencies": {
-    "@types/google-apps-script": "^2.0.7",
     "@types/node": "^24.9.2",
     "rimraf": "^6.1.0",
-    "semantic-release": "^25.0.1",
     "typescript": "^5.9.3",
     "vitest": "^4.0.6"
   }

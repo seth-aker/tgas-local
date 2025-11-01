@@ -56,8 +56,14 @@ export interface IGlobalMocksObject {
   XmlService?: GoogleAppsScript.XML_Service.XmlService,
   YouTube?: GoogleAppsScript.YouTube,
   YouTubeAnalytics?: GoogleAppsScript.YouTubeAnalytics,
-  console: typeof console 
 }
 export const DefaultGlobalMocks: IGlobalMocksObject = {
-  console: console
+  Logger: {
+    log: (data: any) => {
+      console.log(data)
+      return Logger
+    },
+    clear: () => undefined,
+    getLog: () => ''
+  }
 }
