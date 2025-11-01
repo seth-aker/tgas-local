@@ -1,5 +1,4 @@
 /// <reference types="google-apps-script" />
-
 export interface IGlobalMocksObject {
   AdSense?: GoogleAppsScript.Adsense,
   AdminDirectory?: GoogleAppsScript.AdminDirectory,

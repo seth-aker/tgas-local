@@ -40,7 +40,7 @@ const gLib = gasRequire('./appsscript-directory', mockServices)
 gLib.UrlFetchApp.fetch() // returns a the string "fetch called!"
 ```
 
-Inspired by [Mikhail Zagorny's](https://github.com/mzagorny) [gas-local](https://github.com/mzagorny/gas-local) package, but with built in native typescript support.
+Inspired by Mikhail Zagorny's [gas-local](https://github.com/mzagorny/gas-local) package, but with built in native typescript support.
 
 Built with [esbuild](https://github.com/evanw/esbuild) and [glob](https://github.com/isaacs/node-glob)
 
