@@ -1,6 +1,6 @@
 import type { GlobOptions, Path } from "glob"
 import path from "node:path"
-
+export {type GlobOptions, type Path}
 export interface IOptions {
   filter?: (file: string | Path) => boolean,
   globOptions?: GlobOptions
