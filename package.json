@@ -1,6 +1,6 @@
 {
   "name": "tgas-local",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Typescript support for running and testing GAS projects locally.",
   "type": "module",
   "main": "./lib/index.js",
