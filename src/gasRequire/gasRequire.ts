@@ -13,12 +13,13 @@ export function gasRequire(directory: string, globalMocks?: IGlobalMocksObject, 
   
   const context = vm.createContext(mocksObject)
   
-  const filterFunction = options?.filter ? options.filter : defaultOptions.filter;
-  
-  const files = globSync(`${directory}/**/*.{ts,js,gs}`, {
+  const filterFunction = options?.filter ? options.filter : defaultOptions.filter!;
+  const globOptions = options?.globOptions ? options.globOptions : {
     cwd: process.cwd(),
     absolute: true
-  })
+  }
+  
+  const files = globSync(`${directory}/**/*.{ts,js,gs}`, globOptions)
   
   const gsFiles = files.filter(filterFunction)
 
@@ -27,7 +28,7 @@ export function gasRequire(directory: string, globalMocks?: IGlobalMocksObject, 
   }
 
   const typescriptString = gsFiles
-    .map(file => fs.readFileSync(file, 'utf-8'))
+    .map(file => fs.readFileSync(file.toString(), 'utf-8'))
     .join('\n\n// --- new file boundary ---\n\n')
   
   try {
