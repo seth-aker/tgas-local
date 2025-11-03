@@ -44,7 +44,7 @@ export function gasRequire(directory: string, globalMocks?: IGlobalMocksObject, 
 
     return context
   } catch (err) {
-    console.error("Failed to build or run GAS in-memory bundle:", err)
+    console.error("Failed to build or run the GAS in-memory bundle:", err)
     process.exit(1)
   }
 }
