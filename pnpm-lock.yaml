@@ -31,6 +31,18 @@ importers:
         specifier: ^4.0.6
         version: 4.0.6(@types/node@24.9.2)
 
+  example:
+    devDependencies:
+      tgas-local:
+        specifier: file:..
+        version: file:(@types/google-apps-script@2.0.7)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.0.6
+        version: 4.0.6(@types/node@24.9.2)
+
 packages:
 
   '@esbuild/aix-ppc64@0.25.11':
@@ -561,6 +573,11 @@ packages:
   strip-ansi@7.1.2:
     resolution: {integrity: sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==}
     engines: {node: '>=12'}
+
+  'tgas-local@file:':
+    resolution: {directory: '', type: directory}
+    peerDependencies:
+      '@types/google-apps-script': ^2.0.7
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
@@ -1102,6 +1119,12 @@ snapshots:
   strip-ansi@7.1.2:
     dependencies:
       ansi-regex: 6.2.2
+
+  tgas-local@file:(@types/google-apps-script@2.0.7):
+    dependencies:
+      '@types/google-apps-script': 2.0.7
+      esbuild: 0.25.11
+      glob: 11.0.3
 
   tinybench@2.9.0: {}
 

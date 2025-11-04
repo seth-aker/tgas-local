@@ -1,6 +1,6 @@
 {
   "name": "tgas-local",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Typescript support for running and testing GAS projects locally.",
   "type": "module",
   "main": "./lib/index.js",
@@ -21,6 +21,9 @@
     "googleappsscript"
   ],
   "author": "Seth Aker <saker132@gmail.com> (https://github.com/seth-aker)",
+  "repository": {
+    "url": "https://github.com/seth-aker/tgas-local"
+  },
   "license": "MIT",
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
