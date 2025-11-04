@@ -74,4 +74,3 @@ Built with [esbuild](https://github.com/evanw/esbuild) and [glob](https://github
 ## Useful links
 [clasp](https://developers.google.com/apps-script/guides/clasp): Develop and manage googleappsscript projects locally
 [gas-local](https://github.com/mzagorny/gas-local): Inspiration for this project
-[eslint-plugin-googleappsscript](https://github.com/selectnull/eslint-plugin-googleappsscript): Useful eslint plugin

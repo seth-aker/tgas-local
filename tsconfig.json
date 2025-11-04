@@ -31,8 +31,6 @@
     "allowJs": true,
     "typeRoots": [
       "./node_modules/@types",
-      "./src/types",
-      "./node_modules/typescript/lib/tsserverlibrary"
     ]
   },
   "files": ["src/index.ts"],

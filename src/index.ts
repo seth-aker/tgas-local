@@ -1,3 +1,3 @@
-export { gasRequire } from './gasRequire/gasRequire.js'
-export * from './gasRequire/globalMocks.js'
-export * from './gasRequire/options.js'
+export { gasRequire } from './gasRequire.js'
+export * from './globalMocks.js'
+export * from './options.js'
