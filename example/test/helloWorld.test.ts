@@ -3,7 +3,7 @@ import {gasRequire} from 'tgas-local'
 
 const gLib = gasRequire('./src')
 
-test('test', () => {
+test('helloWorld() example', () => {
   const hello = gLib.helloWorld()
   expect(hello).toEqual("Hello World!")
 })

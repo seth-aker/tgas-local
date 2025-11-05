@@ -6,6 +6,7 @@ This project is inspired by the project [gas-local](https://github.com/mzagorny/
 Using this package allows you to run and test your apps script files locally in a node environment without needing to make any changes to the files before pushing or pulling your code to the apps script cloud environment using [clasp](https://developers.google.com/apps-script/guides/clasp).
 
 ## Installation
+Install this package and the types package for google apps scripts
 ### Via npm
 `npm i -D tgas-local @types/google-apps-script`
 
@@ -17,7 +18,7 @@ Using this package allows you to run and test your apps script files locally in 
 // import the gasRequire function
 import { gasRequire } from 'tgas-local'
 
-// Pass the relative path to the directory that includes your apps script files.
+// Pass the relative path from your current working directory to the directory that includes your apps script files.
 const gLib = gasRequire('./path-to-local-googleappsscript-directory')
 
 // Call your apps script functions from the gLib object
@@ -38,16 +39,16 @@ const mockServices: IGlobalMocksObject = {
 // pass it to gasRequire
 const gLib = gasRequire('./appsscript-directory', mockServices)
 
-gLib.UrlFetchApp.fetch() // returns a the string "fetch called!"
+gLib.UrlFetchApp.fetch() // returns the string "fetch called!"
 ```
 
 ## Filtering
 ### Simple file exclusion
 ```javascript
 // Use the options object to pass a filter function that will filter any unwanted files
-// Note: glob is already only reading files with the current extentions .ts, .js, .gs
+// Note: gasRequire is already setup to only read files with the extentions: .ts, .js, .gs
 const options = {
-  filterFunction: (filePath: string) => {
+  filter: (filePath: string) => {
     return filePath === "some-file-to-not-include.ts"
   }
 }
@@ -55,6 +56,7 @@ const gLib = gasRequire('./appscript-directory', mockServices, options)
 ```
 ### Custom Glob options
 ```javascript
+// Accepts any valid parameter of the GlobOptions object from the node-glob library.
 const options = {
   globOptions: {
     cwd: './some-other-dir',
@@ -72,5 +74,5 @@ Inspired by Mikhail Zagorny's [gas-local](https://github.com/mzagorny/gas-local)
 Built with [esbuild](https://github.com/evanw/esbuild) and [glob](https://github.com/isaacs/node-glob)
 
 ## Useful links
-[clasp](https://developers.google.com/apps-script/guides/clasp): Develop and manage googleappsscript projects locally
-[gas-local](https://github.com/mzagorny/gas-local): Inspiration for this project
+- [clasp](https://developers.google.com/apps-script/guides/clasp): Develop and manage googleappsscript projects locally
+- [gas-local](https://github.com/mzagorny/gas-local): Inspiration for this project

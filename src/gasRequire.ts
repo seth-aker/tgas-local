@@ -2,14 +2,14 @@ import * as esbuild from 'esbuild'
 import { globSync } from 'glob'
 import * as vm from 'node:vm';
 import * as fs from 'node:fs';
-import {DefaultGlobalMocks, type IGlobalMocksObject } from './globalMocks.js'
+import {DEFAULT_GLOBAL_MOCKS, type IGlobalMocksObject } from './globalMocks.js'
 import { type IOptions, defaultOptions } from './options.js'
 
 export function gasRequire(directory: string, globalMocks?: IGlobalMocksObject, options?: IOptions) {
   const mocksObject = globalMocks ? {
-    ...DefaultGlobalMocks,
+    ...DEFAULT_GLOBAL_MOCKS,
     ...globalMocks
-  } : DefaultGlobalMocks
+  } : DEFAULT_GLOBAL_MOCKS
   
   const context = vm.createContext(mocksObject)
   
