@@ -3,9 +3,9 @@ import { globSync } from 'glob'
 import * as vm from 'node:vm';
 import * as fs from 'node:fs';
 import {DEFAULT_GLOBAL_MOCKS, type IGlobalMocksObject } from './globalMocks.js'
-import { type IOptions, defaultOptions } from './options.js'
+import { type IGasOptions, defaultOptions } from './options.js'
 
-export function gasRequire(directory: string, globalMocks?: IGlobalMocksObject, options?: IOptions) {
+export function gasRequire(directory: string, globalMocks?: IGlobalMocksObject, options?: IGasOptions) {
   const mocksObject = globalMocks ? {
     ...DEFAULT_GLOBAL_MOCKS,
     ...globalMocks
