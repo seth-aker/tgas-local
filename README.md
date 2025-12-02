@@ -8,10 +8,31 @@ Using this package allows you to run and test your apps script files locally in 
 ## Installation
 Install this package and the types package for google apps scripts
 ### Via npm
-`npm i -D tgas-local @types/google-apps-script`
-
+```
+npm i -D tgas-local @types/google-apps-script
+```
 ### Via pnpm
-`pnpm i -D tgas-local @types/google-apps-script`
+```
+pnpm i -D tgas-local @types/google-apps-script
+```
+### Optional Plugin
+[This plugin](https://github.com/seth-aker/typescript-plugin-tgas-local) adds type checking for the return object from `gasRequire()`
+```
+pnpm i -D typescript-plugin-tgas-local
+```
+
+Then add this plugin information to "compilerOptions" in your `tsconfig.json` file.
+```json
+{
+  // rest of your compilerOptions
+  "plugins": [
+    {
+      "name": "typescript-plugin-tgas-local",
+      "apps-script-directory": "./RELATIVE_PATH_TO_YOUR_GAS_FILES"
+    }
+  ]
+}
+```
 
 ## Usage
 ```javascript
@@ -76,3 +97,4 @@ Built with [esbuild](https://github.com/evanw/esbuild) and [glob](https://github
 ## Useful links
 - [clasp](https://developers.google.com/apps-script/guides/clasp): Develop and manage googleappsscript projects locally
 - [gas-local](https://github.com/mzagorny/gas-local): Inspiration for this project
+- [typescript-plugin-tgas-local](https://github.com/seth-aker/typescript-plugin-tgas-local): Typescript plugin for strong typing your GAS functions in your tests.

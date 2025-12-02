@@ -1,4 +1,4 @@
-type PartialDeep<T> = 
+export type PartialDeep<T> = 
 // If object is a function, return it as a function that returns a partialDeep object
 T extends (...args: infer Args) => infer Return 
   ? (...args: Args) => PartialDeep<Return>
