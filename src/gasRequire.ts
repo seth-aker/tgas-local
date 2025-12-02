@@ -29,17 +29,17 @@ export function gasRequire(directory: string, globalMocks?: IGlobalMocksObject, 
 
   const typescriptString = gsFiles
     .map(file => fs.readFileSync(file.toString(), 'utf-8'))
-    .join('\n\n// --- new file boundary ---\n\n')
-    .replaceAll('const', 'var') // This is done so that all variables declared with const and let will be global in the vm context.
-    .replaceAll('let', 'var');
+    .join('\n\n// --- new file boundary ---\n\n');
   
   try {
-    const { code: jsFiles} = esbuild.transformSync(typescriptString, {
+    const {code} = esbuild.transformSync(typescriptString, {
       loader: 'ts',
       format: 'esm',
       target: 'es2020'
     })
-    
+    const jsFiles = code
+      .replaceAll('const ', 'var ') // This is done so that all variables declared with const and let will be global in the vm context.
+      .replaceAll('let ', 'var ');
     vm.runInContext(jsFiles, context, {
       filename: 'local-gas.js'
     })
