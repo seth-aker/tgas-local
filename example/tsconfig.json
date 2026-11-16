@@ -21,6 +21,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
   },
-  // List all the directories that include GAS files to be uploaded
+   // List all the directories that include GAS files to be uploaded
   "include": ["./src"]
 }

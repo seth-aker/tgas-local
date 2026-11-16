@@ -12,11 +12,12 @@
   "keywords": [],
   "author": "Seth Aker",
   "license": "ISC",
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@12.21.0",
   "devDependencies": {
+    "@types/google-apps-script": "^2.0.15",
     "rimraf": "^6.1.0",
-    "tgas-local": "file:..",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.7"
+    "tgas-local": "workspace:*",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
   }
 }

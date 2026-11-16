@@ -1,9 +1,11 @@
-import {test, expect} from 'vitest'
-import {gasRequire} from 'tgas-local'
+import {test, expect, vi} from 'vitest'
+import {gasRequire } from 'tgas-local'
 
+// Loads all files in ./src dir into gLib
 const gLib = gasRequire('./src')
 
 test('helloWorld() example', () => {
-  const hello = gLib.helloWorld()
-  expect(hello).toEqual("Hello World!")
+  const spy = vi.spyOn(console, 'log');
+  gLib.helloWorld()
+  expect(spy).toHaveBeenCalledWith("Hello World!");
 })

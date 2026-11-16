@@ -7,9 +7,9 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "target": "es2022",
-   
+
     "lib": ["ES2022"],
-   
+
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -17,9 +17,8 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    
     "strict": true,
-    
+
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
@@ -29,6 +28,8 @@
     "forceConsistentCasingInFileNames": true,
     "checkJs": true,
     "allowJs": true,
+
+    "types": ["node", "google-apps-script"],
     "typeRoots": [
       "./node_modules/@types",
     ]
