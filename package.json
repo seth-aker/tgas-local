@@ -23,7 +23,7 @@
   ],
   "author": "Seth Aker <saker132@gmail.com> (https://github.com/seth-aker)",
   "repository": {
-    "url": "https://github.com/seth-aker/tgas-local"
+    "url": "git+https://github.com/seth-aker/tgas-local.git"
   },
   "license": "MIT",
   "packageManager": "pnpm@12.21.0",
